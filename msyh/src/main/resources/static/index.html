@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>民生银行管理系统</title>
+    <link rel="shortcut icon" href="/nk01.png" type="image/x-icon">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //给返回首页修改密码按钮添加单击事件
+            $("#fanhuiBtn").on("click", function () {
+                goFirstPage();
+            });
+
+            //给退出按钮添加单击事件
+            $("#exitBtn").on("click", function () {
+                exitOut();
+            });
+
+        });
+        //返回首页
+        function goFirstPage() {
+            const url = "http://localhost:9099/swagger-ui.html#/";
+            location.href=url;
+        }
+        //退出
+        function exitOut() {
+            alert('你单击了退出按钮');
+        }
+    </script>
+</head>
+<body>
+<div id="fanhuiBtn" class="fanhuiTextDiv">民生银行管理系统API</div>
+
+<div id="exitBtn" class="exitText">民生银行管理系统API起飞</div>
+</body>
+
+</html>

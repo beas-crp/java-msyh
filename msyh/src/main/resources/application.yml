@@ -1,0 +1,25 @@
+server:
+  port: 9099
+
+#数据库链接
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: qwer1234
+    url: jdbc:mysql://localhost:3306/mysql?serverTimezone=GMT
+  jpa:
+    hibernate:
+      ddl-auto: update #自动更新
+    show-sql: true  #日志中显示sql语句
+
+#mybatisplus配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#日志打印
+#logging:
+#  level: info
+#  file:
+#    name: los_sy/ctp.log
